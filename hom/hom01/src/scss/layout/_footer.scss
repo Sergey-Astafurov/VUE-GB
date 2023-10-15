@@ -1,0 +1,85 @@
+.footer {
+    margin-bottom: 134px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        color: $colorText;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    &__log {
+        max-width: 177px;
+    }
+
+    &__left-desc {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 33px */
+        letter-spacing: 0.22px;
+    }
+
+    &__social {
+    }
+
+    &__mid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__mid-title {
+        font-family: $fontTitle;
+        color: $colorTitle;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 31.25px */
+    }
+
+    &__link {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 300%;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__contact {
+        font-family: $fontTitle;
+        color: $colorTitle;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    &__adress {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: #4d5053;
+        font-family: Jost;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 33px */
+        letter-spacing: 0.22px;
+
+    }
+}
+
+.mail {
+    font-weight: normal;
+}
+.tel {
+    font-weight: normal;
+}

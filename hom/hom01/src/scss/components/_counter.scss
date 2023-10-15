@@ -1,0 +1,49 @@
+.counter {
+    background: #f4f0ec;
+    margin-bottom: 96px;
+
+    &__container {
+        padding: 145px 51px;
+        display: flex;
+        justify-content: center;
+        gap: 130px;
+        margin: 0 auto;
+    }
+
+    &__elem {
+        position: relative;
+        &:not(:last-child)::after {
+            position: absolute;
+            content: "";
+            top: 10%;
+            right: -54px;
+            width: 1px;
+            height: 120px;
+            background: $colorAccent;
+        }
+
+    }
+
+    &__title {
+        text-align: center;
+        color: $colorAccent;
+        font-family: $fontTitle;
+        font-size: 85px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 106.25px */
+        letter-spacing: 1.7px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__subtitle {
+        color: $colorText;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 33px */
+        letter-spacing: 0.22px;
+    }
+}
+

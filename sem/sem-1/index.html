@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p > Товаров в корзине {{counter}}</p>
+        <button  @click="counter++">{{counter > 0 ? 'товар в корзине' : 'купить'}}</button>
+        <hr>
+        <button @click="this.flag = 1">мне исполнилось 14 лет </button>
+        <button @click="this.flag = 2">мне еще не исполнилось 14 лет</button>
+        <br>
+        <b v-if="this.flag == 1">Можете заказать товар</b>
+        <b v-else-if="this.flag == 2">нельзя</b>
+
+        <br>
+
+        <hr>
+        <button @click="this.ontext = !this.ontext">Показать еще </button>
+        <p v-if="this.ontext">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa, recusandae blanditiis repellat reprehenderit, quasi error, atque eum perferendis alias inventore. Mollitia non aliquid voluptatem laboriosam sunt molestiae incidunt excepturi?
+        Quaerat temporibus asperiores error recusandae deserunt impedit cupiditate veniam facere quod expedita delectus corporis tempora, optio odio minima. Ipsam, optio distinctio quaerat ducimus facere quod nam est eveniet molestiae placeat.
+        Vitae dignissimos nesciunt quibusdam praesentium nobis corporis natus rem debitis laudantium consequatur. Et hic, quia ipsum dolores consectetur totam delectus cumque est architecto quod magnam, similique enim nisi voluptatem eaque?
+        Laboriosam, corrupti dolor deserunt nemo quis nam, commodi, quas enim est fuga expedita natus itaque cumque voluptatem maxime hic. Voluptatibus iste corporis obcaecati sequi quis nam unde nisi atque quos.</p>
+    </div>
+    <script>
+        const App = {
+            data() {
+                return {
+                    title: 'hello',
+                    counter: 0,
+                    flag: 0,
+                    ontext: false
+                }
+            },
+            methods: {
+
+            },
+        }
+        Vue.createApp(App).mount('#app')
+    </script>
+</body>
+</html>

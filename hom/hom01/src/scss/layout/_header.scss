@@ -1,0 +1,34 @@
+html{
+    background: url('../src/img/Line.png');
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-position: 50% 0;
+
+}
+
+.header {
+    padding-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+
+
+.logo {
+    max-width: 177px;
+}
+.menubar {
+    display: flex;
+}
+.menubar-list {
+    display: flex;
+    gap: 50px;
+
+}
+.menubar-item {
+		&__link {
+            color: $colorTitle;
+            font-size: 20px;
+        }
+}
