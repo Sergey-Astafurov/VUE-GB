@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+    <div class=" container center " >
+        <header class="header flex">
+            <div class="logo">
+                <img src="./src/img/logo.png" alt="">
+
+            </div>
+            <div class="menubar">
+                <ul class="menubar-list">
+                    <li class="menubar-item"><a href="#" class="menubar-item__link">Home</a></li>
+                    <li class="menubar-item"><a href="#" class="menubar-item__link">Project</a></li>
+                    <li class="menubar-item"><a href="#" class="menubar-item__link">Blog</a></li>
+                </ul>
+            </div>
+        </header>
+
+    </div>
+
+    <section class="banner">
+        <div class="banner__img">
+            <img src="./src/img/Banner.jpg" alt="">
+        </div>
+    </section>
+    <section class="posts center">
+        <div class="posts__last">
+            <h3 class="posts__heading"> Latest Post</h3>
+            <div class="posts__body flex">
+                <div class="posts__img">
+                    <img src="./src/img/lastpost.png" alt="">
+                </div>
+                <div class="posts__text">
+                    <div class="posts__title">Low Cost Latest Invented Interior Designing Ideas</div>
+                    <p class="posts__desc">
+                        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere
+                        in.Contrary to popular belief.
+                        <br>
+                        Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+                    </p>
+                    <div class="posts__set">
+                        <div class="posts__date">26 December,2022 </div>
+                        <div class="posts__btn btn"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53"
+                                viewBox="0 0 52 53" fill="none">
+                                <circle cx="26" cy="26.5" r="26" fill="#F4F0EC" />
+                                <path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="blog">
+        <div class="blog__container center">
+            <div class="blog__text">
+                <h3 class="blog__title">
+                    Articles & News
+                </h3>
+                <p class="blog__subtitle">
+                    It is a long established fact that a reader will be distracted by the of readable content of a page
+                    when lookings at its layouts the points of using.
+                </p>
+            </div>
+
+            <div class="blog__list">
+
+                <div class="blog__item" v-for="post  in posts" :key="post.id">
+                    <div class="blog__img">
+                        <img :src="post.img" alt="">
+                        <div class="blog__desc">{{post.desc}}</div>
+
+                    </div>
+                    <div class="blog__body">
+                        <h4 class="blog__heading">{{post.title}}</h4>
+                        <div class="blog__set">
+                            <div class="blog__date">{{post.date }}</div>
+                            <div class="blog__btn btn ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53"
+                                    fill="none">
+                                    <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="blog__pagination center flex">
+                <img src="./src/img/pp1.png" alt="">
+                <img src="./src/img/pp2.png" alt="">
+                <img src="./src/img/pp3.png" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52" fill="none">
+                    <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274"/>
+                    <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </div> -->
+
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer__container center">
+            <div class="footer__left">
+                <div class="footer__log">
+                    <img src="./src/img/logo.png" alt="">
+                </div>
+                <div class="footer__left-desc">
+                    It is a long established fact that a reader <br> will be distracted lookings.
+                </div>
+                <div class="footer__social">
+                </div>
+            </div>
+            <div class="footer__mid">
+                <div class="footer__mid-title">Pages</div>
+                <div class="footer__link">Home</div>
+                <div class="footer__link">Blog</div>
+                <div class="footer__link">Project</div>
+            </div>
+            <div class="footer__right">
+                <div class="footer__contact">Contact</div>
+                <div class="footer__adress">
+                    <div>55 East Birchwood Ave. Brooklyn, <br> New York 11201</div>
+                    <b class="mail">contact@interno.com</b>
+                    <b class="tel"> (123) 456 - 7890</b>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="./src/js/main.js"></script>
+
+</body>
+
+</html>

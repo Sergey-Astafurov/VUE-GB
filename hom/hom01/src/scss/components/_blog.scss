@@ -30,7 +30,9 @@
 
     &__list {
         display: flex;
-        gap: 25px;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-bottom: 51px;
     }
 
     &__item {
