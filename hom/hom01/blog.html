@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Blog</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class=" container center ">
+            <header class="header flex">
+                <div class="logo">
+                    <img src="./src/img/logo.png" alt="">
+
+                </div>
+                <div class="menubar">
+                    <ul class="menubar-list">
+                        <li class="menubar-item"><a href="#" class="menubar-item__link">Home</a></li>
+                        <li class="menubar-item"><a href="#" class="menubar-item__link">Project</a></li>
+                        <li class="menubar-item"><a href="#" class="menubar-item__link">Blog</a></li>
+                    </ul>
+                </div>
+            </header>
+
+        </div>
+        <section class="banner">
+            <img src="./src/img/bann.jpg" alt="">
+        </section>
+        <section class="blogs flex center">
+            <div class="blogs__list">
+                <div class="blogs__item flex" v-for="blog in filterBlogs" :key="blog.id">
+
+                    <h3 class="blogs__title"> {{blog.title}} </h3>
+
+                    <div class="blogs__img">
+                        <img :src="blog.img" alt="">
+                    </div>
+                    <div class="blogs__set flex">
+                        <div class="blogs__date">{{blog.date}} </div>
+                        <a class="blogs__link" href="">Interior / Home / Decore</a>
+                    </div>
+                    <p class="blogs__text">
+                        {{blog.desc}}
+                    </p>
+                </div>
+
+            </div>
+            <div class="blogs__tags">
+                <div class="blogs__tags-title">
+                    Tags
+                </div>
+                <div class="blogs__tags-list">
+                    <div href="#" @click="filter('Kitchen')" class="blogs__tags-link">Kitchen</div>
+                    <div href="#" @click="filter('Bedroom')" class="blogs__tags-link">Bedroom</div>
+                    <div href="#" @click="filter('Building')" class="blogs__tags-link">Building</div>
+                    <div href="#" @click="filter('Arhiticture')" class="blogs__tags-link">Architecture</div>
+                    <div href="#" @click="filter('Kitchen Planning')" class="blogs__tags-link">Kitchen Planning</div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer__container center">
+                <div class="footer__left">
+                    <div class="footer__log">
+                        <img src="./src/img/logo.png" alt="">
+                    </div>
+                    <div class="footer__left-desc">
+                        It is a long established fact that a reader <br> will be distracted lookings.
+                    </div>
+                    <div class="footer__social">
+                    </div>
+                </div>
+                <div class="footer__mid">
+                    <div class="footer__mid-title">Pages</div>
+                    <div class="footer__link">Home</div>
+                    <div class="footer__link">Blog</div>
+                    <div class="footer__link">Project</div>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__contact">Contact</div>
+                    <div class="footer__adress">
+                        <div>55 East Birchwood Ave. Brooklyn, <br> New York 11201</div>
+                        <b class="mail">contact@interno.com</b>
+                        <b class="tel"> (123) 456 - 7890</b>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="./src/js/blog.js"></script>
+</body>
+
+</html>
