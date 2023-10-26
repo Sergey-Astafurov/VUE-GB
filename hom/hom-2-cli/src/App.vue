@@ -194,17 +194,21 @@
 </div>
 </section>
   <FooterComp></FooterComp>
+<ProjectComp/>
 </template>
 
 <script>
+
 import FooterComp from './components/Footer-comp.vue';
 import HeaderComp from './components/Header-comp.vue';
+import ProjectComp from './components/Project-comp.vue';
 export default {
   name: 'App',
   components: {
     HeaderComp,
-    FooterComp
-  }
+    FooterComp,
+    ProjectComp
+}
 }
 </script>
 
