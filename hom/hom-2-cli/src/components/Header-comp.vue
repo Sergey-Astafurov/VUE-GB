@@ -6,11 +6,10 @@
 
             </div>
             <div class="menubar">
-                <ul class="menubar-list">
-                    <li class="menubar-item"><a href="#" class="menubar-item__link">Home</a></li>
-                    <li class="menubar-item"><a href="#" class="menubar-item__link">Project</a></li>
-                    <li class="menubar-item"><a href="Blog-comp.vue" class="menubar-item__link">Blog</a></li>
-                </ul>
+                    <nav class="menubar-list">
+                        <router-link v-for="link in linkarr" :key="link.id" :to="link.url" class="menubar-item__link">{{ link.name
+                        }}</router-link>
+                    </nav>
             </div>
         </header>
 
@@ -23,16 +22,36 @@ export default {
 
     data() {
         return {
+            linkarr: [
+                {
+                    id: 0,
+                    name: 'Home',
+                    url: '/'
+                },
+                {
+                    id: 1,
+                    name: 'Project',
+                    url: '/project'
+                },
+                {
+                    id: 2,
+                    name: 'Blog',
+                    url: '/blog'
+                },
+
+
+            ]
         }
     },
-    components : {
+    components: {
     }
 
 }
 </script>
 <style lang="scss">
 @import "@/assets/scss/abstracts/vars";
-    html{
+
+html {
     background: url('@/assets/img/Line.png');
     background-repeat: no-repeat;
     background-size: 1200px;
@@ -52,19 +71,20 @@ export default {
 .logo {
     max-width: 177px;
 }
+
 .menubar {
     display: flex;
 }
+
 .menubar-list {
     display: flex;
     gap: 50px;
 
 }
-.menubar-item {
-		&__link {
-            color: $colorTitle;
-            font-size: 20px;
-        }
-}
 
-</style>
+.menubar-item {
+    &__link {
+        color: $colorTitle;
+        font-size: 20px;
+    }
+}</style>
